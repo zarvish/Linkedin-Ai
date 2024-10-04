@@ -1,0 +1,27 @@
+/* style.css */
+
+/* AI Icon Container */
+.ai-icon-container {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+/* AI Icon Image */
+.ai-icon-container img {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,91 @@
+/* modal */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F9FAFB;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.message-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    overflow: scroll;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    border-radius: 4px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.generate-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+.insert-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    color: #666D80;
+    border: 1px solid #666D80;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Space between buttons */
+}
+
+.regenerate-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #DFE1E7;
+    color: #666D80;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    max-width: 70%;
+}
+
+.ai-response {
+    background-color: #DBEAFE;
+    color: #666D80;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    max-width: 70%;
+    transition: opacity 0.3s ease-in-out; /* Adjust timing and easing as desired */
+    opacity: 1; /* Default state */
+}

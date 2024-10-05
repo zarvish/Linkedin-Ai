@@ -13,7 +13,7 @@ function App() {
                     <img src={reactLogo} className="logo react" alt="React logo" />
                 </a>
             </div>
-            <h1>LinkedIn AI Reply System</h1>
+            <h1 >LinkedIn AI Reply System</h1>
             <div className="card">
                 <p>
                     This system helps you generate smart and professional replies on LinkedIn.

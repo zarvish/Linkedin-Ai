@@ -1,91 +1,57 @@
-/* modal */
+/*
+This CSS uses the Tailwind CSS @apply directive to integrate utility classes directly into custom components.
+Using @apply helps maintain consistency, improve readability, and make development faster by reusing Tailwind’s
+well-structured utility classes. It also follows DRY principles, reducing code duplication. By relying on Tailwind's
+utility-first approach, we can ensure scalable, maintainable, and efficient styling, especially in components like
+modals, buttons, and message containers.
+*/
 
+
+/* Modal */
 .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
+    @apply fixed top-1/2 left-1/2 bg-gray-50 p-5 shadow-lg z-[9999] w-[50%] rounded-lg;
     transform: translate(-50%, -50%);
-    background-color: #F9FAFB;
-    padding: 20px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-    width: 50%;
-    border-radius: 8px;
 }
 
+
+/* Message Container */
 .message-container {
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    max-height: 300px;
-    overflow: scroll;
+    @apply mb-2.5 flex flex-col max-h-72 overflow-y-scroll;
 }
 
+/* Input Field */
 .input-field {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    box-shadow: none;
-    border-radius: 4px;
+    @apply w-full p-2.5 mb-5 rounded-md;
+    border: 1px solid #C1C7D0!important;
+    box-shadow: none!important;
 }
 
+/* Button Container */
 .button-container {
-    display: flex;
-    justify-content: flex-end;
+    @apply flex justify-end;
 }
 
+/* Generate Button */
 .generate-button {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #3B82F6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; /* Add cursor pointer for better UX */
+    @apply flex items-center p-2.5 bg-blue-500 text-white border-none rounded-md cursor-pointer;
 }
 
+/* Insert Button */
 .insert-button {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: transparent;
-    color: #666D80;
-    border: 1px solid #666D80;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px; /* Space between buttons */
+    @apply flex items-center p-2.5 bg-transparent text-gray-500 border border-solid border-gray-500 rounded-md cursor-pointer mr-2.5;
 }
 
+/* Regenerate Button */
 .regenerate-button {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #3B82F6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; /* Add cursor pointer for better UX */
+    @apply flex items-center p-2.5 bg-blue-500 text-white border-none rounded-md cursor-pointer;
 }
 
+/* User Message */
 .user-message {
-    align-self: flex-end;
-    background-color: #DFE1E7;
-    color: #666D80;
-    padding: 10px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    max-width: 70%;
+    @apply self-end bg-gray-200 text-gray-500 p-2.5 rounded-xl mb-2.5 max-w-[70%];
 }
 
+/* AI Response */
 .ai-response {
-    background-color: #DBEAFE;
-    color: #666D80;
-    padding: 10px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    max-width: 70%;
-    transition: opacity 0.3s ease-in-out; /* Adjust timing and easing as desired */
-    opacity: 1; /* Default state */
+    @apply bg-blue-100 text-gray-500 p-2.5 rounded-xl mb-2.5 max-w-[70%] transition-opacity duration-300 ease-in-out opacity-100;
 }

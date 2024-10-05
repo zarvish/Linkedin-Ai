@@ -1,27 +1,15 @@
-/* style.css */
+/*
+This CSS uses the Tailwind CSS @apply directive to integrate utility classes directly into custom components.
+Using @apply helps maintain consistency, improve readability, and make development faster by reusing Tailwind’s
+well-structured utility classes. It also follows DRY principles, reducing code duplication. By relying on Tailwind's
+utility-first approach, we can ensure scalable, maintainable, and efficient styling, especially in components like
+modals, buttons, and message containers.
+*/
 
-/* AI Icon Container */
 .ai-icon-container {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    display: none; /* Initially hidden */
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background-color: white;
-    border-radius: 50%;
-    z-index: 9999;
+    @apply absolute right-2 bottom-2 hidden items-center justify-center w-12 h-12 bg-white rounded-full z-[9999];
 }
 
-/* AI Icon Image */
 .ai-icon-container img {
-    width: 24px;
-    height: 24px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 4px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    @apply w-8 h-8 bg-white rounded-full p-1 cursor-pointer;
 }
